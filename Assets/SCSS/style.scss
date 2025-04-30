@@ -185,7 +185,8 @@ background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='
 
 /*Fondo berries en header Legales.html, se reemplazo por un degradado en paleta de colores para mayor armonización estética*/
 .fondoberries {
-  background: linear-gradient(55deg, rgba(93, 27, 148, 1) 0%, rgba(245, 186, 245, 1) 100%);
+  background: #c18eed;
+  background: linear-gradient(55deg, rgba(193, 142, 237, 0.93) 0%, rgba(242, 211, 242, 1) 100%);;
   padding: 15px 25px;
   border-radius: 8px;
   text-align: center;

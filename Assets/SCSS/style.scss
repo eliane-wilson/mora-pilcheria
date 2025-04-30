@@ -1,0 +1,15 @@
+//Color en todos los H2 (Reemplazo el naranja por un morado acorde a la paleta de colores "Mora" 
+$color-morado: #6a1b9a; 
+
+.arriba {
+    color: $color-morado;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.1);
+      color: darken($color-morado, 10%);
+    }
+  }
+  

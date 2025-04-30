@@ -1,15 +1,542 @@
-//Color en todos los H2 (Reemplazo el naranja por un morado acorde a la paleta de colores "Mora" 
+@use "sass:color";
+
 $color-morado: #6a1b9a; 
 
-.arriba {
-    color: $color-morado;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//Mixin//
+
+@mixin morado-texto($negrita: false) {
+  color: $color-morado;
+  @if $negrita == true {
     font-weight: bold;
-    text-decoration: none;
-    transition: transform 0.3s ease, color 0.3s ease;
-  
-    &:hover {
-      transform: scale(1.1);
-      color: darken($color-morado, 10%);
+  }
+}
+
+//Uso directo en todos los h2 el tono morado para mayor consistencia en el estilo, aplicando mixin 
+//Color en todos los H2 (Reemplazo el naranja por un morado acorde a la paleta de colores "Mora" 
+h2{
+  @include morado-texto(true);
+  font-family:  "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  //Vinculo Arriba en index que sea de color morado con hover cuando pasamos el mouse encima 
+}
+
+
+header {
+    width: 100%;
+    height: 800px; 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    animation: backgroundCarousel 15s infinite; /*para carrousel de header saque codigo armado de carrousel que incluye @keyframes de abajo con ruta de archivo propio*/
+}
+
+@keyframes backgroundCarousel {
+    0% {
+        background-image: url('../morabanner0.png');
     }
+    25% {
+        background-image: url('../morabanner2.png');
+    }
+    50% {
+        background-image: url('../morabanner1.png');
+    }
+    75% {
+        background-image: url('../banner03.png');
+    }
+    100% {
+        background-image: url('../banner04.png');
+    }
+}
+
+
+h1{
+    color: #5c4a72;
+    font-weight: bold;
+    font-size:400%;
+    text-align: center;
+    font-family: "RocknRoll One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+body{
+    background-color:rgba(236, 187, 222, 0.582);
+
+   
+}
+
+p {
+    font-size: 20px;
+    color: #5c4a72;
+    text-align: justify;
+    margin: 15px; 
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+
+
+nav {
+    background-color: rgb(143, 110, 145);
+    text-align: center;
+   
+}
+
+section{
+    background-size: 1920px ;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(66, 2, 85);
+    
+
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+}
+
+/*id*/
+
+#centrado{
+    text-align:center; 
+ }
+
+ #especialtabla{
+    border: 0px 
+ }
+/*Clases*/
+
+//Vinculo con clase con mixing hecho con sass directamente//
+
+.arriba {
+  @include morado-texto (true);
+  //Saque el bold porque en el mixing ya da la opcion de $negrita true//
+  text-align: center;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #9b59b6, #eb82cbcb); // degrade
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  justify-content: center;
+
+  a {
+    display: inline-block; // la correccion se dio porque el enlace se corria hacia la izquierda. Se aplica para que transform funcione bien
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    color: color.adjust($color-morado, $lightness: -10%);
+    
+  }
+}
+
+.about {
+  text-align: center;}
+
+  h5 {
+    @include morado-texto(false);
+    font-size: 0.75rem;
+    color: $color-morado;
+    font-family: "Anton SC", sans-serif;
+    font-weight: normal;
+    background-color: #f8f9fa;
   }
   
+  h5 p {
+    font-family: "Anton SC", sans-serif;
+    font-weight: normal;
+    font-size: 0.7rem;
+    color: #444;
+    margin-bottom: 0.25rem;
+  }
+  
+
+/*fondo de pagina */
+
+.patterns {
+    background-color: #DFDBE5;
+background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.patternsfruit{background-color: #DFDBE5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='44' viewBox='0 0 34 44'%3E%3Cg fill='%239C92AC' fill-opacity='0.11'%3E%3Cpath fill-rule='evenodd' d='M1 6.2C.72 5.55.38 4.94 0 4.36v13.28c.38-.58.72-1.2 1-1.84A12.04 12.04 0 0 0 7.2 22 12.04 12.04 0 0 0 1 28.2c-.28-.65-.62-1.26-1-1.84v13.28c.38-.58.72-1.2 1-1.84A12.04 12.04 0 0 0 7.2 44h21.6a12.05 12.05 0 0 0 5.2-4.36V26.36A12.05 12.05 0 0 0 28.8 22a12.05 12.05 0 0 0 5.2-4.36V4.36A12.05 12.05 0 0 0 28.8 0H7.2A12.04 12.04 0 0 0 1 6.2zM17.36 23H12a10 10 0 1 0 0 20h5.36a11.99 11.99 0 0 1 0-20zm1.28-2H24a10 10 0 1 0 0-20h-5.36a11.99 11.99 0 0 1 0 20zM12 1a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 14a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3.46-2a2 2 0 1 0-3.47 2 2 2 0 0 0 3.47-2zm0-4a2 2 0 1 0-3.47-2 2 2 0 0 0 3.47 2zM12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3.46 2a2 2 0 1 0 3.47-2 2 2 0 0 0-3.47 2zm0 4a2 2 0 1 0 3.47 2 2 2 0 0 0-3.47-2zM24 43a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm0-14a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3.46 2a2 2 0 1 0 3.47-2 2 2 0 0 0-3.47 2zm0 4a2 2 0 1 0 3.47 2 2 2 0 0 0-3.47-2zM24 37a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3.46-2a2 2 0 1 0-3.47 2 2 2 0 0 0 3.47-2zm0-4a2 2 0 1 0-3.47-2 2 2 0 0 0 3.47 2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/*Fondo berries en header Legales.html, se reemplazo por un degradado en paleta de colores para mayor armonización estética*/
+.fondoberries {
+  background: linear-gradient(55deg, rgba(93, 27, 148, 1) 0%, rgba(245, 186, 245, 1) 100%);
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px auto;
+}
+  
+  
+/*Barra de navegacion flotante para redes:*/
+
+.barra-redes {
+    position: fixed;
+    top: 40%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+  }
+  
+  .barra-redes img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+  }
+  
+  .barra-redes img:hover {
+    transform: scale(1.1);
+  }
+  
+  .barra-redes a {
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .barra-redes a:hover {
+    background-color: rgba(124, 58, 211, 0.5); }
+  
+/*Logo principal*/
+
+.logo-principal {
+    width: 150px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+.contenido-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+  }
+  
+  .video-columna, .texto-columna {
+    flex: 1 1 45%;
+  }
+  
+  .video-columna video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .texto-columna h2 {
+    color: $color-morado;
+    font-family: "Anton SC", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .texto-columna p {
+    color: #5c4a72;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  
+.estructura{
+    background-color: #d69033;
+    display: flex; 
+    gap: 20px;
+    text-align: center;
+}
+
+
+.sidebar {
+    position:sticky;
+    top: 0;
+    right: 0;
+    margin-left: 250px;
+    width: 150px; 
+    height: 100%;
+    background-color: #eeb3eb; 
+    color: white;
+    padding: 20px;
+ 
+  }
+
+  .textochico{
+    font-size: 10px;color: #5c4a72; 
+    text-align:justify;
+    width: 70%;
+    height: 100%; 
+    margin-left: 15%;
+    margin-right: 25%;
+
+}
+
+.fondo{
+    background-color: #DFDBE5;
+background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.carrousel{
+    width: 100%;
+    height: 800px; 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    animation: backgroundCarrousel 17s infinite; /*para carrousel de header saque codigo armado de carrousel que incluye @keyframes de abajo con ruta de archivo propio*/
+}
+
+@keyframes backgroundCarrousel {
+    0% {
+        background-image: url('../banner03.png');
+    }
+    25% {
+        background-image: url('../productos2.png');
+    }
+    50% {
+        background-image: url('../productos3.png');
+    }
+    75% {
+        background-image: url('../productos 4.png');
+    }
+    100% {
+        background-image: url('../banner04.png');
+    }
+}
+
+.header-terminos{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #5c4a72;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        border-left: 4px solid #8c52ff;
+        padding-left: 12px;
+}
+/*Estilos dentro del html Legales */
+
+/* Estilo general para enlaces  */
+.legales {
+  padding: 25px;
+  max-width: 1000px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/* Alineado de  títulos - en el proyecto anterior estaba pegado al margen izquierdo*/
+.legales h2 {
+  margin-top: 1.5em;
+  color: #5c0032; /* o el color principal que uses */
+  font-weight: bold;
+}
+
+/* Alineado de  párrafos y listas */
+.legales p,
+.legales ul {
+  margin-bottom: 1em;
+  line-height: 1.6;
+  color: $color-morado 
+}
+
+/* Listas con sangría */
+.legales ul {
+  padding-left: 45px;
+}
+
+/* Estilo enlaces */
+.legales a {
+  color: #8b004b;
+  text-decoration: none;
+}
+.legales a:hover {
+  text-decoration: underline;
+}
+
+
+/*footer*/
+
+.footer {
+    background-color: #b99dcf;
+    padding: 30px 20px;
+    border-top: 1px solid #ccc;
+    font-size: 0.95rem;
+    color: #5c4a72;
+  }
+  
+  .footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    align-items: center;
+  }
+  
+  .footer-seccion {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #3e3352;
+  }
+  
+  .footer-seccion ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin: 0;
+  }
+  
+  .footer-logo {
+    height: 110px;
+    width: auto;
+    margin-top: 10px;
+  }
+
+  .descripcion {
+    font-family: 'RocknRoll One', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+}
+
+
+  .sidebarp {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+
+  
+  
+  
+
+  /*Media Queries para hacerlo responsivo*/
+
+  @media (max-width: 768px) {
+    .contenido-principal {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .texto-columna h2 {
+      text-align: center;
+    }
+  
+    .video-columna, .texto-columna {
+      flex: 1 1 100%;
+    }
+ 
+    header,
+    .carrousel {
+      height: 300px;
+      background-size: cover;
+    }
+  
+    h1 {
+      font-size: 2rem;
+      padding: 0 10px;
+    }
+  
+    h2 {
+      font-size: 1.3rem;
+      padding: 0 10px;
+    }
+  
+    p {
+      width: 90%;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+  
+    video {
+      margin: 0 auto;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .estructura,
+    .organizado {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .sidebar {
+      position: static;
+      margin: 20px auto;
+      width: 90%;
+    }
+    .barra-redes {
+        right: 5px;
+        top: auto;
+        bottom: 10px;
+        flex-direction: row;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px;
+        border-radius: 10px;
+      }
+    
+      .barra-redes img {
+        width: 30px;
+        height: 30px;
+      }
+    table {
+      width: 90%;
+      font-size: 0.9rem;
+    }
+  
+    .footer-contenido {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-seccion {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+    }
+  
+    .footer-logo {
+      height: 60px;
+    }
+  }

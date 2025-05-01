@@ -1,0 +1,32 @@
+/*Barra de navegacion flotante para redes:*/
+
+.barra-redes {
+    position: fixed;
+    top: 40%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+  }
+  
+  .barra-redes img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+  }
+  
+  .barra-redes img:hover {
+    transform: scale(1.1);
+  }
+  
+  .barra-redes a {
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .barra-redes a:hover {
+    background-color: rgba(124, 58, 211, 0.5); }
+  

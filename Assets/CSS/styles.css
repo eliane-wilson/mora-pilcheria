@@ -48,11 +48,11 @@ h1 {
   font-style: normal;
 }
 
+/* se hace anidado */
 body {
   background-color: rgba(236, 187, 222, 0.582);
 }
-
-p {
+body p {
   font-size: 20px;
   color: #5c4a72;
   text-align: justify;
@@ -62,13 +62,11 @@ p {
   margin-right: auto;
   padding: 0 15px;
 }
-
-nav {
+body nav {
   background-color: rgb(143, 110, 145);
   text-align: center;
 }
-
-section {
+body section {
   background-size: 1920px;
 }
 
@@ -162,6 +160,7 @@ h5 p {
   margin: 20px auto;
 }
 
+/*se hace import de navegadores*/
 /*Barra de navegacion flotante para redes:*/
 .barra-redes {
   position: fixed;
@@ -192,6 +191,27 @@ h5 p {
 
 .barra-redes a:hover {
   background-color: rgba(124, 58, 211, 0.5);
+}
+
+/*hago import de texto para los <p>*/
+.texto-base, .textochico, .textomediano {
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  color: #5c4a72;
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.textomediano {
+  font-size: 15px;
+  text-align: left;
+}
+
+.textochico {
+  font-size: 10px;
+  text-align: justify;
 }
 
 /*Logo principal*/
@@ -239,7 +259,7 @@ h5 p {
 }
 
 .estructura {
-  background-color: #d69033;
+  background-color: #b961eb;
   display: flex;
   gap: 20px;
   text-align: center;
@@ -255,16 +275,6 @@ h5 p {
   background-color: #eeb3eb;
   color: white;
   padding: 20px;
-}
-
-.textochico {
-  font-size: 10px;
-  color: #5c4a72;
-  text-align: justify;
-  width: 70%;
-  height: 100%;
-  margin-left: 15%;
-  margin-right: 25%;
 }
 
 .fondo {

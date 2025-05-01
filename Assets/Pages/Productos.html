@@ -46,14 +46,34 @@
     </section>
     <br>
 
-    <!---Grid de Boostrap-queda pendiente mejorar las imagenes -->
+    <!---Grid de Boostrap-ya se mejoraron  las imagenes -->
 
     <div class="container my-5"> 
         <div class="row text-center">
           <div class="col-md-6 col-lg-3 mb-4">
-            <img src="../1.png" class="img-fluid" alt="Estilo Romántico">
-            <p>Dale el toque femenino a todas tus prendas con nuestro Estilo Romántico</p>
+            <div id="carousel1" class="carousel slide custom-carousel" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../1.png" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="../18.png" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="../19.png" class="d-block w-100" alt="Imagen 3">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <p>Estilo Romantico. Vestidos falda larga. Estampado Floral. </p>
+            <p class="textomediano">Colores: Lavanda, Tiza, Blanco, Baby Pink.  Talles: S al XXL</p>
           </div>
+          
           <div class="col-md-6 col-lg-3 mb-4">
             <img src="../2.png" class="img-fluid" alt="Mujer Versátil, tenemos un look para cada labor">
             <p>Mira nuestro nuevo outfit "Sunflowers". Plus size, Plus style</p>
@@ -66,12 +86,32 @@
             <img src="../4.png" class="img-fluid" alt="Nuevo Producto">
             <p>Nuevos ingresos</p>
           </div>
+          <!-- integro un carrousel con boostrap para mostrar algunas prendas a detalle-->
 
           <div class="col-md-6 col-lg-3 mb-4">
-            <img src="../5.png" class="img-fluid" alt="Cuidarse, es amarse">
-            <p>Mente sana en cuerpo sano... también estilo sano.</p>
-
+            <div id="carousel2" class="carousel slide custom-carousel" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../5.png" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="../6.png" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="../8.png" class="d-block w-100" alt="Imagen 3">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <p>Dale el toque femenino a todas tus prendas con nuestro Estilo Romántico. Sweater de Cachemira</p>
+            <p class="textomediano"> Colores: Lavanda, Celeste y Ladrillo. Talles S al XXXL</p>
           </div>
+          
     
           <div class="col-md-6 col-lg-3 mb-4">
             <img src="../6.png" class="img-fluid" alt="Cuidarse, es amarse">
@@ -239,6 +279,9 @@
           </div>
         </div>
       </footer>
+      <!-- cierre boostrap-->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 <br>
 

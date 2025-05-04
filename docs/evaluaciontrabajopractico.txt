@@ -1,0 +1,12 @@
+Tuve problemas con el compilado de archivos desde git asi que 
+instale en visual studio la extensión live sass compiler. 
+Desde settings coloque "savePath": "Assets/CSS", (Carpeta de alojamiento de styles.css 
+
+se creo archivo _backgrounds.scss para import porque hay un conjunto de clases que intervienen en el background de los distintos archivos HTML
+
+se creo archivo _text, _nav para importar. (pendiente cambio de comando por @use)
+
+En HTML "Productos.html" 
+<!---Separe en 2 row para tener el contenido mas ordenado prque sino al hacerse muy largo, era facil perder el control al modificar las imagenes--->
+
+<- Se redujo el tamaño de las imágenes via tinypng.com y se reemplazo en archivo 1 a 47.png

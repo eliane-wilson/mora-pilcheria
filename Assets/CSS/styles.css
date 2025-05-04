@@ -97,6 +97,7 @@ video {
   color: #6a1b9a;
   font-weight: bold;
   text-align: center;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 10px 20px;
   border-radius: 25px;
@@ -113,7 +114,7 @@ video {
 }
 .arriba:hover {
   transform: scale(1.1);
-  color: rgb(76.1325966851, 19.3922651934, 110.6077348066);
+  color: #4c136f;
 }
 
 .about {
@@ -492,5 +493,3 @@ h5 p {
     height: 60px;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */

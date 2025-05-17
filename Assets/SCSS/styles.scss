@@ -1,25 +1,18 @@
 @use "sass:color";
+@use 'mixins' as *;
 
-$color-morado: #6a1b9a; 
+
+
 
 * {
     margin: 0;
     padding: 0;
 }
 
-//Mixin//
-
-@mixin morado-texto($negrita: false) {
-  color: $color-morado;
-  @if $negrita == true {
-    font-weight: bold;
-  }
-}
-
 //Uso directo en todos los h2 el tono morado para mayor consistencia en el estilo, aplicando mixin 
 //Color en todos los H2 (Reemplazo el naranja por un morado acorde a la paleta de colores "Mora" 
 h2{
-  @include morado-texto(true);
+  @include morado-texto;
   font-family:  "Anton SC", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -39,16 +32,16 @@ header {
 
 @keyframes backgroundCarousel {
     0% {
-        background-image: url('../morabanner0.png');
+        background-image: url('../background1.png');
     }
     25% {
-        background-image: url('../morabanner2.png');
+        background-image: url('../background2.png');
     }
     50% {
-        background-image: url('../morabanner1.png');
+        background-image: url('../background3.png');
     }
     75% {
-        background-image: url('../banner03.png');
+        background-image: url('../background4.png');
     }
     100% {
         background-image: url('../banner04.png');
@@ -62,7 +55,6 @@ h1{
     font-size:400%;
     text-align: center;
     font-family: "Pacifico", cursive;
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -120,7 +112,7 @@ video {
 //Vinculo con clase con mixing hecho con sass directamente//
 
 .arriba {
-  @include morado-texto (true);
+  @include morado-texto ;
   //Saque el bold porque en el mixing ya da la opcion de $negrita true//
   text-align: center;
   width: fit-content;
@@ -149,7 +141,7 @@ video {
   text-align: center;}
 
   h5 {
-    @include morado-texto(false);
+    @include morado-texto;
     font-size: 0.75rem;
     color: $color-morado;
     font-family: "Anton SC", sans-serif;
@@ -165,6 +157,7 @@ video {
     margin-bottom: 0.25rem;
   }
   
+  
 /*se hace import de fondos : archivo backgrounds-scss */
 @import "_backgrounds";
   
@@ -173,7 +166,8 @@ video {
 
 /*hago import de texto para los <p>*/
 @import "_text";
-
+/*hago import de botones (mas enfocado para lo comercial)*/
+@import "_botones";
 
 /*Logo principal*/
 
@@ -257,23 +251,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='
     animation: backgroundCarrousel 17s infinite; /*para carrousel de header saque codigo armado de carrousel que incluye @keyframes de abajo con ruta de archivo propio*/
 }
 
-@keyframes backgroundCarrousel {
-    0% {
-        background-image: url('../banner03.png');
-    }
-    25% {
-        background-image: url('../productos2.png');
-    }
-    50% {
-        background-image: url('../productos3.png');
-    }
-    75% {
-        background-image: url('../productos 4.png');
-    }
-    100% {
-        background-image: url('../banner04.png');
-    }
-}
+
 
 .header-terminos{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

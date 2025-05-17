@@ -1,0 +1,35 @@
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.3);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+.btn-contacto {
+  display: inline-block;
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  animation: heartbeat 1.5s infinite;
+  transition: transform 0.2s;
+}
+.btn-contacto:hover, .btn-contacto:focus {
+  background-color: #4c136f;
+  text-decoration: none;
+}

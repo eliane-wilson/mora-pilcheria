@@ -30,3 +30,38 @@
   .barra-redes a:hover {
     background-color: rgba(124, 58, 211, 0.5); }
   
+    /*Barra de audio - Decidi colocarla como nav  */
+
+    .audio-responsivo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 6px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(5px);
+    
+      audio {
+        width: 180px;
+        height: 30px;
+      }
+    
+      @media (max-width: 768px) {
+        right: 10px;
+        bottom: 10px;
+    
+        audio {
+          width: 140px;
+          height: 26px;
+        }
+      }
+    
+      @media (max-width: 480px) {
+        audio {
+          width: 120px;
+        }
+      }
+    }
+    

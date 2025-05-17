@@ -1,0 +1,27 @@
+// Importo el archivo mixins para usar los mixins definidos (morado-texto y efecto-latido)
+@use 'mixins' as *;
+
+// Estilo del botón de contacto flotante con animación de latido
+.btn-contacto {
+  @include morado-texto;              // Usa color morado del mixin
+  @include efecto-latido(1s);         // Usa animación de latido
+
+  padding: 10px 20px;
+  background-color: #be90df;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  position: fixed;                    // Lo hace "flotante"
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); // Sombra
+
+  // Cambio de color al pasar el mouse - hover
+  &:hover {
+    background-color: darken(#be90df, 10%);
+  }
+}
+

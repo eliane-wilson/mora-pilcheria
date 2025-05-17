@@ -5,8 +5,7 @@
 }
 
 h2 {
-  color: #6a1b9a;
-  font-weight: bold;
+  color: #6a0dad;
   font-family: "Anton SC", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -23,16 +22,16 @@ header {
 
 @keyframes backgroundCarousel {
   0% {
-    background-image: url("../morabanner0.png");
+    background-image: url("../background1.png");
   }
   25% {
-    background-image: url("../morabanner2.png");
+    background-image: url("../background2.png");
   }
   50% {
-    background-image: url("../morabanner1.png");
+    background-image: url("../background3.png");
   }
   75% {
-    background-image: url("../banner03.png");
+    background-image: url("../background4.png");
   }
   100% {
     background-image: url("../banner04.png");
@@ -44,7 +43,6 @@ h1 {
   font-size: 400%;
   text-align: center;
   font-family: "Pacifico", cursive;
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -94,8 +92,7 @@ video {
 
 /*Clases*/
 .arriba {
-  color: #6a1b9a;
-  font-weight: bold;
+  color: #6a0dad;
   text-align: center;
   width: -moz-fit-content;
   width: fit-content;
@@ -114,7 +111,7 @@ video {
 }
 .arriba:hover {
   transform: scale(1.1);
-  color: #4c136f;
+  color: #4d097e;
 }
 
 .about {
@@ -122,9 +119,9 @@ video {
 }
 
 h5 {
-  color: #6a1b9a;
+  color: #6a0dad;
   font-size: 0.75rem;
-  color: #6a1b9a;
+  color: #6a0dad;
   font-family: "Anton SC", sans-serif;
   font-weight: normal;
   background-color: #f8f9fa;
@@ -193,6 +190,39 @@ h5 p {
   background-color: rgba(124, 58, 211, 0.5);
 }
 
+/*Barra de audio - Decidi colocarla como nav  */
+.audio-responsivo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 6px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.audio-responsivo audio {
+  width: 180px;
+  height: 30px;
+}
+@media (max-width: 768px) {
+  .audio-responsivo {
+    right: 10px;
+    bottom: 10px;
+  }
+  .audio-responsivo audio {
+    width: 140px;
+    height: 26px;
+  }
+}
+@media (max-width: 480px) {
+  .audio-responsivo audio {
+    width: 120px;
+  }
+}
+
 /*hago import de texto para los <p>*/
 .texto-base, .textochico, .textomediano {
   font-family: Arial, sans-serif;
@@ -212,6 +242,45 @@ h5 p {
 .textochico {
   font-size: 10px;
   text-align: justify;
+}
+
+/*hago import de botones (mas enfocado para lo comercial)*/
+.btn-contacto {
+  color: #6a0dad;
+  animation: heartbeat 1s infinite;
+  transition: transform 0.2s;
+  padding: 10px 20px;
+  background-color: #be90df;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.3);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+.btn-contacto:hover {
+  background-color: #a768d4;
 }
 
 /*Logo principal*/
@@ -244,7 +313,7 @@ h5 p {
 }
 
 .texto-columna h2 {
-  color: #6a1b9a;
+  color: #6a0dad;
   font-family: "Anton SC", sans-serif;
   font-size: 2rem;
   margin-bottom: 20px;
@@ -291,23 +360,6 @@ h5 p {
   animation: backgroundCarrousel 17s infinite; /*para carrousel de header saque codigo armado de carrousel que incluye @keyframes de abajo con ruta de archivo propio*/
 }
 
-@keyframes backgroundCarrousel {
-  0% {
-    background-image: url("../banner03.png");
-  }
-  25% {
-    background-image: url("../productos2.png");
-  }
-  50% {
-    background-image: url("../productos3.png");
-  }
-  75% {
-    background-image: url("../productos 4.png");
-  }
-  100% {
-    background-image: url("../banner04.png");
-  }
-}
 .header-terminos {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
@@ -340,7 +392,7 @@ h5 p {
 .legales ul {
   margin-bottom: 1em;
   line-height: 1.6;
-  color: #6a1b9a;
+  color: #6a0dad;
 }
 
 /* Listas con sangría */

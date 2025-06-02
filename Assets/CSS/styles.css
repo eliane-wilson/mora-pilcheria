@@ -223,6 +223,19 @@ h5 p {
   }
 }
 
+.custom-navbar {
+  background-color: #B284BE; /* lavanda o tu color deseado */
+}
+
+.custom-navbar .nav-link {
+  color: white;
+  margin: 0 10px;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ffe3fe;
+}
+
 /*hago import de texto para los <p>*/
 .texto-base, .textochico, .textomediano {
   font-family: Arial, sans-serif;
